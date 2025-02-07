@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { Input } from "../../../components/Input";
 import { useLogin } from "../hooks/useLogin";
 import { LoginFormData, loginSchema } from "../schemas/login.schema";
-import { RegisterFormData } from "../schemas/register.schema";
 import { FormHeader } from "./FormHeader";
 
 export const Login = () => {
