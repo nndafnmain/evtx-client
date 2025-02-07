@@ -1,8 +1,18 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Login } from "./features/auth/components/Login";
+import { Register } from "./features/auth/components/Register";
+import { Auth } from "./features/auth/pages/Auth";
+
 function App() {
   return (
-    <main>
-      <h1 className="text-amber-600">Hi</h1>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/auth" element={<Auth />}>
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
