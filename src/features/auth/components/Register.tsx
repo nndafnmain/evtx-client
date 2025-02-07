@@ -37,34 +37,39 @@ export const Register = () => {
         className="grid grid-cols-1 gap-2 space-y-3 rounded-xl border border-gray-300 bg-white p-3 shadow-xl"
       >
         <Input
-          placeholder="Username.."
+          label="Username"
+          placeholder="Cole Palmer"
           registration={register("username")}
           error={errors.username?.message}
         />
 
         <Input
+          label="Email"
           type="email"
-          placeholder="Email.."
+          placeholder="palmer@gmail.com"
           registration={register("email")}
           error={errors.email?.message}
         />
 
         <Input
+          label="Password"
           type="password"
-          placeholder="Password.."
+          placeholder="*********"
           registration={register("password")}
           error={errors.password?.message}
         />
 
         <Input
+          label="Confirm Password"
           type="password"
-          placeholder="Confirm Password.."
+          placeholder="*********"
           registration={register("confirmPassword")}
           error={errors.confirmPassword?.message}
         />
 
         <Input
-          placeholder="Referral Code.."
+          label="Referral Code"
+          placeholder="5ABBV7"
           registration={register("referralCode")}
           error={errors.referralCode?.message}
         />

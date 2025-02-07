@@ -34,13 +34,15 @@ export const Login = () => {
         className="space-y-3 rounded-xl border border-gray-300 bg-white p-3 shadow-xl md:grid-cols-2"
       >
         <Input
+          label="Email"
           type="email"
-          placeholder="Email.."
+          placeholder="caicedo@gmail.com"
           registration={register("email")}
           error={errors.email?.message}
         />
 
         <Input
+          label="Password"
           type="password"
           placeholder="Password.."
           registration={register("password")}
