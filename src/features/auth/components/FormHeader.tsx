@@ -16,7 +16,10 @@ export const FormHeader = ({
     <header className="space-y-3 text-center">
       <p className="text-lg font-semibold text-gray-800 md:text-xl">{title}</p>
       <p className="text-sm text-gray-400">
-        {subtitle} <Link to={to}>{link}</Link>
+        {subtitle}{" "}
+        <Link to={to} className="text-blue-700">
+          {link}
+        </Link>
       </p>
     </header>
   );

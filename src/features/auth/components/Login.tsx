@@ -2,7 +2,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Input } from "../../../components/Input";
 import { useLogin } from "../hooks/useLogin";
-import { RegisterFormData, registerSchema } from "../schemas/register.schema";
+import { LoginFormData, loginSchema } from "../schemas/login.schema";
+import { RegisterFormData } from "../schemas/register.schema";
 import { FormHeader } from "./FormHeader";
 
 export const Login = () => {
@@ -10,13 +11,13 @@ export const Login = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<RegisterFormData>({
-    resolver: zodResolver(registerSchema),
+  } = useForm<LoginFormData>({
+    resolver: zodResolver(loginSchema),
   });
 
   const mutation = useLogin();
 
-  const onSubmit = (data: RegisterFormData) => {
+  const onSubmit = (data: LoginFormData) => {
     mutation.mutate(data);
   };
   return (

@@ -4,7 +4,7 @@ import { Input } from "../../../components/Input";
 import { useRegister } from "../hooks/useRegister";
 import { RegisterFormData } from "../schemas/register.schema";
 import { FormHeader } from "./FormHeader";
-import { registerSchema } from "./Login";
+import { registerSchema } from "../schemas/register.schema";
 
 export const Register = () => {
   const {
@@ -34,7 +34,7 @@ export const Register = () => {
       </section>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid grid-cols-1 gap-2 space-y-3 rounded-xl border border-gray-300 bg-white p-3 shadow-xl md:grid-cols-2"
+        className="grid grid-cols-1 gap-2 space-y-3 rounded-xl border border-gray-300 bg-white p-3 shadow-xl"
       >
         <Input
           placeholder="Username.."
@@ -69,7 +69,11 @@ export const Register = () => {
           error={errors.referralCode?.message}
         />
 
-        <button type="submit" className="button-full col-span-2 cursor-pointer">
+        <button
+          type="submit"
+          className="button-full cursor-pointer"
+          disabled={mutation.isPending ? true : false}
+        >
           Register
         </button>
       </form>
