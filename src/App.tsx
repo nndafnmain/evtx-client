@@ -3,7 +3,8 @@ import { Login } from "./features/auth/components/Login";
 import { Register } from "./features/auth/components/Register";
 import { Auth } from "./features/auth/pages/Auth";
 import { Dashboard } from "./features/dashboard/pages/Dashboard";
-import { CreateEvent } from "./features/dashboard/components/CreateEvent";
+import { CreateEvent } from "./features/dashboard/pages/CreateEvent";
+import { HomeDashboard } from "./features/dashboard/pages/HomeDashboard";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route path="login" element={<Login />} />
         </Route>
         <Route path="/organizer/dashboard" element={<Dashboard />}>
-          <Route path="event" element={<h1>DASHBOARD HOME</h1>} />
+          <Route path="home" element={<HomeDashboard />} />
           <Route path="event/create" element={<CreateEvent />} />
         </Route>
       </Routes>

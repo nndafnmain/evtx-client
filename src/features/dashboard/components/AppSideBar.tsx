@@ -10,7 +10,7 @@ const appSidebar = [
         className="text-[#FAF6E3] transition duration-300 group-hover:text-[#2A3663]"
       />
     ),
-    to: "/organizer/dashboard/event",
+    to: "/organizer/dashboard/home",
   },
   {
     title: "Create Event",
