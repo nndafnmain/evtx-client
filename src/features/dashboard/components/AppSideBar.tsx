@@ -6,7 +6,7 @@ const appSidebar = [
     title: "Dashboard",
     icon: (
       <LayoutGrid
-        size={23}
+        size={20}
         className="text-[#FAF6E3] transition duration-300 group-hover:text-[#2A3663]"
       />
     ),
@@ -16,7 +16,7 @@ const appSidebar = [
     title: "Create Event",
     icon: (
       <TicketPlus
-        size={23}
+        size={20}
         className="text-[#FAF6E3] transition duration-300 group-hover:text-[#2A3663]"
       />
     ),
@@ -26,7 +26,7 @@ const appSidebar = [
     title: "Create Event",
     icon: (
       <TicketPlus
-        size={23}
+        size={20}
         className="text-[#FAF6E3] transition duration-300 group-hover:text-[#2A3663]"
       />
     ),
@@ -36,7 +36,7 @@ const appSidebar = [
     title: "Create Event",
     icon: (
       <TicketPlus
-        size={23}
+        size={20}
         className="text-[#FAF6E3] transition duration-300 group-hover:text-[#2A3663]"
       />
     ),
@@ -46,7 +46,7 @@ const appSidebar = [
     title: "Create Event",
     icon: (
       <TicketPlus
-        size={23}
+        size={20}
         className="text-[#FAF6E3] transition duration-300 group-hover:text-[#2A3663]"
       />
     ),
@@ -61,7 +61,7 @@ export const AppSideBar = () => {
         <section className="flex items-center justify-between text-[#FAF6E3]">
           <h1 className="text-xl font-semibold text-[#B59F78]">EVNTX</h1>
           <img
-            src="/auth/auth.svg"
+            src="https://github.com/shadcn.png"
             width={40}
             height={40}
             className="rounded-full border border-gray-400"
@@ -77,7 +77,7 @@ export const AppSideBar = () => {
                   className="flex w-[200px] items-center gap-5 rounded-md p-1 transition-all duration-300 hover:bg-[#FAF6E3]"
                 >
                   {value.icon}
-                  <p className="w-full text-base font-semibold text-[#FAF6E3] transition-colors duration-300 hover:text-[#2A3663]">
+                  <p className="w-full text-sm font-semibold text-[#FAF6E3] transition-colors duration-300 hover:text-[#2A3663]">
                     {value.title}
                   </p>
                 </Link>
