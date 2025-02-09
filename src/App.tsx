@@ -6,11 +6,13 @@ import { Dashboard } from "./features/dashboard/pages/Dashboard";
 import { CreateEvent } from "./features/dashboard/pages/CreateEvent";
 import { HomeDashboard } from "./features/dashboard/pages/HomeDashboard";
 import { MyEvents } from "./features/dashboard/pages/MyEvents";
+import { Home } from "./features/home/pages/Home";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />}>
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />

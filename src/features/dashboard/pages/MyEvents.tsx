@@ -1,4 +1,4 @@
-import { EventCard } from "../components/EventCard";
+import { EventCard } from "../../events/components/EventCard";
 
 export const MyEvents = () => {
   return (
