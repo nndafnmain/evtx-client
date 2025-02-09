@@ -2,10 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Login } from "./features/auth/components/Login";
 import { Register } from "./features/auth/components/Register";
 import { Auth } from "./features/auth/pages/Auth";
-import { Dashboard } from "./features/dashboard/pages/Dashboard";
 import { CreateEvent } from "./features/dashboard/pages/CreateEvent";
+import { Dashboard } from "./features/dashboard/pages/Dashboard";
 import { HomeDashboard } from "./features/dashboard/pages/HomeDashboard";
 import { MyEvents } from "./features/dashboard/pages/MyEvents";
+import { EventDetail } from "./features/events/pages/EventDetail";
 import { Home } from "./features/home/pages/Home";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/event/detail" element={<EventDetail />} />
         <Route path="/auth" element={<Auth />}>
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
