@@ -1,4 +1,4 @@
-import { LayoutGrid, TicketPlus } from "lucide-react";
+import { ChartNoAxesGantt, LayoutGrid, TicketPlus } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const appSidebar = [
@@ -23,14 +23,14 @@ const appSidebar = [
     to: "/organizer/dashboard/event/create",
   },
   {
-    title: "Create Event",
+    title: "My Events",
     icon: (
-      <TicketPlus
+      <ChartNoAxesGantt
         size={20}
         className="text-[#FAF6E3] transition duration-300 group-hover:text-[#2A3663]"
       />
     ),
-    to: "/organizer/dashboard/event/create",
+    to: "/organizer/dashboard/event/lists",
   },
   {
     title: "Create Event",
