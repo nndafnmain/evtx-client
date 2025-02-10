@@ -2,7 +2,7 @@
 
 @utility container {
   margin-inline: auto;
-  padding-inline: 0.5rem;
+  padding-inline: 1rem;
 }
 
 body {
@@ -10,9 +10,9 @@ body {
 }
 
 .input {
-  @apply w-full rounded-md border border-blue-500 p-2 text-xs focus:ring-2 focus:ring-blue-300 focus:outline-none md:p-3 md:text-sm;
+  @apply w-full rounded-md border border-blue-500 p-3 text-xs focus:ring-2 focus:ring-blue-300 focus:outline-none md:p-3 md:text-sm;
 }
 
 .button-full {
-  @apply w-full rounded-md bg-blue-600 p-1.5 text-sm text-white md:p-3 md:text-base;
+  @apply w-full rounded-md bg-blue-600 p-2 text-sm text-white md:p-3 md:text-base;
 }
