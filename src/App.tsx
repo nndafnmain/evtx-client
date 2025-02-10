@@ -9,6 +9,7 @@ import { MyEvents } from "./features/dashboard/pages/MyEvents";
 import { EventDetail } from "./features/events/pages/EventDetail";
 import { ExploreEvents } from "./features/events/pages/ExploreEvents";
 import { Home } from "./features/home/pages/Home";
+import { AttendeeLists } from "./features/dashboard/pages/AttendeeLists";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="home" element={<HomeDashboard />} />
           <Route path="event/create" element={<CreateEvent />} />
           <Route path="event/lists" element={<MyEvents />} />
+          <Route path="attendee/lists" element={<AttendeeLists />} />
         </Route>
       </Routes>
     </BrowserRouter>
