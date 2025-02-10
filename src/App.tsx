@@ -7,6 +7,7 @@ import { Dashboard } from "./features/dashboard/pages/Dashboard";
 import { HomeDashboard } from "./features/dashboard/pages/HomeDashboard";
 import { MyEvents } from "./features/dashboard/pages/MyEvents";
 import { EventDetail } from "./features/events/pages/EventDetail";
+import { ExploreEvents } from "./features/events/pages/ExploreEvents";
 import { Home } from "./features/home/pages/Home";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/event/detail" element={<EventDetail />} />
+        <Route path="/explore/events" element={<ExploreEvents />} />
         <Route path="/auth" element={<Auth />}>
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />

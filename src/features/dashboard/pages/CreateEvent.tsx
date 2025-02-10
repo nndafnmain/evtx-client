@@ -24,6 +24,7 @@ export const CreateEvent = () => {
 
   const startDate = watch("startDate");
   const endDate = watch("endDate");
+  const selectedType = watch("type");
 
   const mutation = useCreateEvent();
 
@@ -73,6 +74,7 @@ export const CreateEvent = () => {
             placeholder="Cole Palmer"
             registration={register("price")}
             error={errors.price?.message}
+            disabled={selectedType === "FREE"}
           />
           <Input
             label="Total Ticket"

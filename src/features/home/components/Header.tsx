@@ -1,7 +1,7 @@
 import { Search } from "lucide-react";
 
 export const Header = () => {
-  const isAuth = true;
+  const isAuth = false;
   return (
     <header className="flex h-16 items-center bg-[#2A3663] md:h-20">
       <div className="container flex items-center justify-between">
@@ -29,13 +29,15 @@ export const Header = () => {
             />
           </section>
         ) : (
-          <section className="flex hidden gap-3 md:block">
-            <button className="w-24 rounded-md bg-[#FAF6E3] p-2 text-sm">
-              Register
-            </button>
-            <button className="w-24 rounded-md bg-[#FAF6E3] p-2 text-sm">
-              Login
-            </button>
+          <section className="hidden md:block">
+            <div className="flex gap-3">
+              <button className="w-24 rounded-md bg-[#FAF6E3] p-2 text-sm">
+                Register
+              </button>
+              <button className="w-24 rounded-md bg-[#FAF6E3] p-2 text-sm">
+                Login
+              </button>
+            </div>
           </section>
         )}
       </div>
