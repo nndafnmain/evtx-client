@@ -64,7 +64,9 @@ export const AppSideBar = () => {
     <main className="flex h-full flex-col justify-between">
       <div className="space-y-10">
         <section className="flex items-center justify-between text-[#FAF6E3]">
-          <h1 className="text-xl font-semibold text-[#B59F78]">EVNTX</h1>
+          <Link to={"/"}>
+            <h1 className="text-xl font-semibold text-[#B59F78]">EVNTX</h1>
+          </Link>
           <img
             src="https://github.com/shadcn.png"
             width={40}

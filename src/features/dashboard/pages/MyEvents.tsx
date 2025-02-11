@@ -30,9 +30,8 @@ export const MyEvents = () => {
       <div className="grid grid-cols-4 gap-y-5">
         {data.map((dt: any, idx: any) => {
           return (
-            <div>
+            <div key={idx}>
               <EventCard
-                key={idx}
                 organizer={dt.user.username}
                 price={dt.price}
                 title={dt.title}

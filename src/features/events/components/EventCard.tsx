@@ -21,7 +21,7 @@ export const EventCard: React.FC<IEventCard> = ({
         className="w-full rounded-lg rounded-b-none"
       />
       <section className="my-2 space-y-3 p-3">
-        <p className="text-base font-normal text-gray-700">
+        <p className="truncate text-base font-normal text-gray-700">
           {title ?? "Kontras By Abdur Arsyad"}
         </p>
         <p className="text-gray-500">15 Feb 2025</p>

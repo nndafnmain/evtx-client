@@ -58,16 +58,10 @@ export const CreateEvent = () => {
         >
           <Input
             label="Title"
-            placeholder="Cole Palmer"
+            placeholder="Mens Rea - Pandji"
             registration={register("title")}
             error={errors.title?.message}
           />{" "}
-          <Input
-            label="Description"
-            placeholder="Cole Palmer"
-            registration={register("description")}
-            error={errors.description?.message}
-          />
           <Input
             label="Price"
             type="number"
@@ -77,19 +71,26 @@ export const CreateEvent = () => {
             disabled={selectedType === "FREE"}
           />
           <Input
+            label="Discount"
+            type="number"
+            placeholder="Cole Palmer"
+            registration={register("discount")}
+            error={errors.discount?.message}
+            disabled={selectedType === "FREE"}
+          />
+          <Input
             label="Total Ticket"
             type="number"
             placeholder="Cole Palmer"
             registration={register("totalTicket")}
             error={errors.totalTicket?.message}
           />
-          <div className="flex flex-col">
-            <label htmlFor="">Type</label>
+          <div className="flex flex-col space-y-2">
+            <label className="text-xs">Type</label>
             <select
-              id=""
               {...register("type")}
               defaultValue="PAID"
-              className="border border-blue-700 p-3"
+              className="input border border-blue-700 p-3"
             >
               <option value="FREE">FREE</option>
               <option value="PAID">PAID</option>
@@ -110,7 +111,8 @@ export const CreateEvent = () => {
             registration={register("location")}
             error={errors.location?.message}
           />
-          <div>
+          {/* Full-width Start Date */}
+          <div className="col-span-2">
             <label className="block text-sm font-medium">Start Date</label>
             <DatePicker
               selected={startDate}
@@ -122,19 +124,21 @@ export const CreateEvent = () => {
               <p className="text-sm text-red-500">{errors.startDate.message}</p>
             )}
           </div>
-          <div>
+          {/* Full-width End Date */}
+          <div className="col-span-2">
             <label className="block text-sm font-medium">End Date</label>
             <DatePicker
               selected={endDate}
               onChange={(date) => setValue("endDate", date as Date)}
               dateFormat="yyyy-MM-dd"
-              minDate={startDate || new Date()} // Prevent selecting past dates
+              minDate={startDate || new Date()}
               className="w-full rounded-md border p-2"
             />
             {errors.endDate && (
               <p className="text-sm text-red-500">{errors.endDate.message}</p>
             )}
           </div>
+          {/* Time (remains half width) */}
           <div>
             <label className="block text-sm font-medium">Time</label>
             <input
@@ -146,7 +150,15 @@ export const CreateEvent = () => {
               <p className="text-sm text-red-500">{errors.time.message}</p>
             )}
           </div>
-          <button className="button-full" type="submit">
+          {/* Full-width Description */}
+          <div className="col-span-2">
+            <label>Description</label>
+            <textarea
+              {...register("description")}
+              className="w-full rounded-md border border-gray-500 p-3"
+            ></textarea>
+          </div>
+          <button className="button-full col-span-2" type="submit">
             Submit
           </button>
         </form>

@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/event/detail" element={<EventDetail />} />
+        <Route path="/event/detail/:slug" element={<EventDetail />} />
         <Route path="/explore/events" element={<ExploreEvents />} />
         <Route path="/auth" element={<Auth />}>
           <Route path="register" element={<Register />} />

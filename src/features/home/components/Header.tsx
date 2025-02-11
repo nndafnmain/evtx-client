@@ -1,14 +1,18 @@
 import { Search } from "lucide-react";
+import { useAuthStore } from "../../auth/stores/auth.store";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
-  const isAuth = false;
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
   return (
     <header className="flex h-16 items-center bg-[#2A3663] md:h-20">
       <div className="container flex items-center justify-between">
         <section>
-          <h1 className="text-lg font-semibold text-[#B59F78] md:text-2xl">
-            EVNTX
-          </h1>
+          <Link to={"/"}>
+            <h1 className="text-lg font-semibold text-[#B59F78] md:text-2xl">
+              EVNTX
+            </h1>
+          </Link>
         </section>
         <section className="flex items-center gap-2">
           <input
@@ -19,7 +23,7 @@ export const Header = () => {
             <Search className="text-blue-900" size={20} />
           </button>
         </section>
-        {isAuth ? (
+        {isAuthenticated ? (
           <section className="hidden md:block">
             <img
               src="https://github.com/shadcn.png"
@@ -31,12 +35,16 @@ export const Header = () => {
         ) : (
           <section className="hidden md:block">
             <div className="flex gap-3">
-              <button className="w-24 rounded-md bg-[#FAF6E3] p-2 text-sm">
-                Register
-              </button>
-              <button className="w-24 rounded-md bg-[#FAF6E3] p-2 text-sm">
-                Login
-              </button>
+              <Link to={`/auth/register`}>
+                <button className="w-24 rounded-md bg-[#FAF6E3] p-2 text-sm hover:cursor-pointer">
+                  Register
+                </button>
+              </Link>
+              <Link to={`/auth/login`}>
+                <button className="w-24 rounded-md bg-[#FAF6E3] p-2 text-sm hover:cursor-pointer">
+                  Login
+                </button>
+              </Link>
             </div>
           </section>
         )}

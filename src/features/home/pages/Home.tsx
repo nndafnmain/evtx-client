@@ -5,7 +5,7 @@ import { EventRecomendation } from "./EventRecomendation";
 export const Home = () => {
   return (
     <main>
-      {/* <Header /> */}
+      <Header />
       <Banner />
       <EventRecomendation />
       <img

@@ -38,6 +38,10 @@ export const eventSchema = z.object({
     message: "It must be FREE or PAID event. Choose one!",
   }),
   categories: z.string(),
+  discount: z.preprocess(
+    (val) => (typeof val === "string" ? Number(val) : val),
+    z.number().min(0, "Price must be a positive number"),
+  ),
 });
 
 export type EventFormValues = z.infer<typeof eventSchema>;
